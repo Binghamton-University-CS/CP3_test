@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-if [ $# -ne 3 ]; then
+# HOW TO RUN:
+# 
+# 1. Copy the bash file (cp3_tester.h) and the expect file (cp3_subroutine.exp) to the same directory as your executable (e.g., bin directory).
+# 2. cd to the directory of your executable (e.g., bin directory).
+# 3. Execute the following command: 
+#    "bash cp3_tester_votingvariant.sh ./<executable> <testcase-number>"
+# 4. Refer to the 'EXPECTED OUTPUT DESCRIPTION' output and verify if your output contains the expected result.
+
+if [ $# -ne 2 ]; then
 	echo "bash cp3_tester.sh ./<executable> <testcase-number>"
 	exit 1
 fi
@@ -27,9 +35,11 @@ quit
 # DESIRED RESULTS
 declare -A desired_result
 desired_result[1]="
-SaturdayNightFever features:
-- John Travolta
-- Karen Gorney
+cast 1 should output: 
+
+	SaturdayNightFever features:
+		- John Travolta
+		- Karen Gorney
 "
 
 # INTERACTION
@@ -39,7 +49,7 @@ clear
 #echo "$interaction"
 
 expect cp3_subroutine.exp "$1" "${tests[$2]}" 2>&1
-printf "\n\n********** DESIRED_RESULT **********\\n\n${desired_result[$2]}\n\n\n"
+printf "\n\n********** EXPECTED OUTPUT DESCRIPTION **********\\n\n${desired_result[$2]}\n\n\n"
 
 
 exit 0
