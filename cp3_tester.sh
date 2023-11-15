@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 3 ]; then
 	echo "bash cp3_tester.sh ./<executable> <testcase-number>"
 	exit 1
 fi
@@ -27,11 +27,9 @@ quit
 # DESIRED RESULTS
 declare -A desired_result
 desired_result[1]="
-cast 1 should output: 
-
-	SaturdayNightFever features:
-		- John Travolta
-		- Karen Gorney
+SaturdayNightFever features:
+- John Travolta
+- Karen Gorney
 "
 
 # INTERACTION
@@ -41,7 +39,7 @@ clear
 #echo "$interaction"
 
 expect cp3_subroutine.exp "$1" "${tests[$2]}" 2>&1
-printf "\n\n********** EXPECTED OUTPUT DESCRIPTION **********\\n\n${desired_result[$2]}\n\n\n"
+printf "\n\n********** DESIRED_RESULT **********\\n\n${desired_result[$2]}\n\n\n"
 
 
 exit 0
