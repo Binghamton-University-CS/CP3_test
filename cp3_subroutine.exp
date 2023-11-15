@@ -1,0 +1,32 @@
+#!/usr/bin/env expect
+
+# DOCUMENTATIONS: https://www.mkssoftware.com/docs/man1/expect.1.asp
+
+# TCL expect
+
+if { [llength $argv] != 2 } {
+    puts "expect cp3_subroutine.exp <executable> <test-case-number>"
+    exit 1
+}
+
+set executable [lindex $argv 0]
+set arg1 [lindex $argv 1]
+set TEST [string trim $arg1]
+set test_cmds [split $TEST "\n"]
+
+# add safety-last-element due to 'string trim' cmd
+#lappend test_cmds "safety-trailer" 
+
+spawn $executable
+set timeout 0
+foreach test_cmd $test_cmds {
+    expect "."
+    send "$test_cmd\r"
+    sleep 0.02
+    expect *    
+}
+# expect * : clear input buffer
+
+
+
+#expect eof
