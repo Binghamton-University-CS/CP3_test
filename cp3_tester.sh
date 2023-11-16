@@ -30,6 +30,8 @@ join_cast 21 1
 cast 1
 quit
 "
+
+# test-case 2 : 
 tests[2]="
 add_movie 1 2022 SS Rajamouli RRR
 add_movie 1 2022 SS Rajamouli RRR
