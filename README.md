@@ -2,9 +2,10 @@
 
 1. If utilizing Professor Lewis's main file (movie_db.cpp), ensure that in the main function, the 'silent' parameter of **accept_commands(istream &is, bool silent=true, bool echo=false)** is set to **true**, and then proceed to compile.
 
-    ``` int main()
+    ```
+    int main()
     {
-      accept_commands(cin, **true**, false);
+      accept_commands(cin, true, false);
       return 0;
     }
     ```
