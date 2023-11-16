@@ -11,7 +11,7 @@
 2. Copy the bash file (cp3_tester.h) and the expect file (cp3_subroutine.exp) to the same directory as your executable (e.g., bin directory).
 3. cd to the directory of your executable (e.g., bin directory).
 4. Execute the following command: 
-    "bash cp3_tester.sh ./<executable> <testcase-number>"
+    bash cp3_tester.sh ./<executable> <testcase-number>
 5. Refer to the 'EXPECTED OUTPUT DESCRIPTION' output and verify if your output contains the expected result.
 
 
