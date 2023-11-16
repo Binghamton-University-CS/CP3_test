@@ -55,6 +55,7 @@ quit
 
 # DESIRED RESULTS
 declare -A desired_result
+
 desired_result[1]="
 add_movie 1 1977 Bednam John SaturdayNightFever
 add_movie: Added SaturdayNightFever (1977) directed by John Bednam
@@ -83,6 +84,7 @@ SaturdayNightFever features:
 - Karen Gorney
 - John Travolta
 "
+
 desired_result[2]="
 register_actor: Registered actor Ram Konidela
 register_actor 2 Jr NTR
@@ -141,4 +143,5 @@ printf "\n\n********** EXPECTED OUTPUT DESCRIPTION **********\\n\n${desired_resu
 
 
 exit 0
+
 
