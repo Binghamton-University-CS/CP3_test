@@ -1,6 +1,6 @@
 # test-helper files for CP3
 
-1. If utilizing Professor Lewis's main file (movie_db.cpp), ensure that in the main function, the 'silent' parameter of **accept_commands(istream &is, bool silent=true, bool echo=false)** is set to **true**, and then proceed to compile.
+1. If utilizing Professor Lewis's main file (movie_db.cpp), ensure that in the main function, the 'silent' parameter of **accept_commands(istream &is, bool silent, bool echo)** is set to **true**, and then proceed to compile.
     ```
     int main()
     {
