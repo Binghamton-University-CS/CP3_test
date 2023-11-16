@@ -4,7 +4,7 @@
     ```
     int main()
     {
-      accept_commands(cin, `**`true`**` , false);
+      accept_commands(cin, true , false);
       return 0;
     }
     ```
