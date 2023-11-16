@@ -4,7 +4,7 @@
     ```
     int main()
     {
-      accept_commands(cin, :<strong>true:</strong>, false);
+      accept_commands(cin, <strong>true</strong>, false);
       return 0;
     }
     ```
