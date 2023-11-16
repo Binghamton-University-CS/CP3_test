@@ -22,7 +22,7 @@ set timeout 0
 foreach test_cmd $test_cmds {
     expect "."
     send "$test_cmd\r"
-    sleep 0.02
+    sleep 0.1
     expect *    
 }
 # expect * : clear input buffer
