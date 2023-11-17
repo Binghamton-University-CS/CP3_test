@@ -54,6 +54,20 @@ remove_movie 2
 career 1
 quit
 "
+# test-case 3 : 
+tests[3]="
+add_movie 1 1977 Bednam John SaturdayNightFever
+add_movie 2 1972 FordCoppala Francis TheGodfather
+register_actor 100 Travolta John
+register_actor 100 Gorney Karen
+join_cast 100 1
+join_cast 100 1
+join_cast 100 2
+join_cast 101 2
+cast 1
+cast 2
+quit
+"
 
 # DESIRED RESULTS
 declare -A desired_result
@@ -73,14 +87,12 @@ register_actor 21 Gorney Karen
 register_actor: Registered actor Karen Gorney
 join_cast 22 1
 join_cast: Added actor John Travolta to the cast of SaturdayNightFever
-join_cast: Associated movie SaturdayNightFever with John Travolta
 join_cast 22 2
 join_cast: Error movie id 2 does not exist
 join_cast 23 1
 join_cast: Error actor id 23 does not exist
 join_cast 21 1
 join_cast: Added actor Karen Gorney to the cast of SaturdayNightFever
-join_cast: Associated movie SaturdayNightFever with Karen Gorney
 cast 1
 SaturdayNightFever features:
 - Karen Gorney
@@ -104,16 +116,12 @@ register_actor 3 Bhatt Alia
 register_actor: Registered actor Alia Bhatt
 join_cast 1 1
 join_cast: Added actor Ram Konidela to the cast of RRR
-join_cast: Added movie RRR to the filmography of Ram Konidela
 join_cast 3 1
 join_cast: Added actor Alia Bhatt to the cast of RRR
-join_cast: Added movie RRR to the filmography of Alia Bhatt
 join_cast 2 1
 join_cast: Added actor NTR Jr to the cast of RRR
-join_cast: Added movie RRR to the filmography of NTR Jr
 join_cast 1 2
 join_cast: Added actor Ram Konidela to the cast of Test
-join_cast: Added movie Test to the filmography of Ram Konidela
 cast 4
 cast: Error movie id 4 does not exist
 cast 1
@@ -143,6 +151,31 @@ Ram Konidela has acted in:
 - RRR
 "
 
+desired_result[3]="
+add_movie 1 1977 Bednam John SaturdayNightFever
+add_movie: Added SaturdayNightFever (1977) directed by John Bednam
+add_movie 2 1972 FordCoppala Francis TheGodfather
+add_movie: Added TheGodfather (1972) directed by Francis FordCoppala
+register_actor 100 Travolta John
+register_actor: Registered actor John Travolta
+register_actor 100 Gorney Karen
+register_actor: Error actor id 100 already in use
+join_cast 100 1
+join_cast: Added actor John Travolta to the cast of SaturdayNightFever
+join_cast 100 1
+join_cast: Error John Travolta is already in the cast of SaturdayNightFever
+join_cast 100 2
+join_cast: Added actor John Travolta to the cast of TheGodfather
+join_cast 101 2
+join_cast: Error actor id 101 does not exist
+cast 1
+SaturdayNightFever features:
+- John Travolta
+cast 2
+TheGodfather features:
+- John Travolta
+"
+
 # INTERACTION
 clear 
 #interaction=$(expect cp3_subroutine.exp "$1" "$2" "${tests[$3]}" 2>&1)
@@ -154,5 +187,6 @@ printf "\n\n********** EXPECTED OUTPUT DESCRIPTION **********\\n\n${desired_resu
 
 
 exit 0
+
 
 
