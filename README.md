@@ -9,7 +9,7 @@
     }
     ```
     
-2. Copy the bash file (cp3_tester.h) and the expect file (cp3_subroutine.exp) to the same directory as your executable (e.g., bin directory).
+2. Copy the bash file (cp3_tester.h) and the expect file (cp3_subroutine.exp) to the same directory as your executable (e.g., bin directory) **on remote**
 
 3. cd to the directory of your executable (e.g., bin directory).
 
