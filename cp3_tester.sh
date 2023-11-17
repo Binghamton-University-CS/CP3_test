@@ -88,6 +88,15 @@ SaturdayNightFever features:
 "
 
 desired_result[2]="
+add_movie 1 2022 SS Rajamouli RRR
+add_movie: Added RRR (2022) directed by Rajamouli SS
+add_movie 1 2022 SS Rajamouli RRR
+add_movie: Error movie id 1 already in use
+add_movie 2 2010 Cameroon James Test
+add_movie: Added Test (2010) directed by James Cameroon
+register_actor 1 Konidela Ram Charan
+
+Ignoring unexpected arguments
 register_actor: Registered actor Ram Konidela
 register_actor 2 Jr NTR
 register_actor: Registered actor NTR Jr
@@ -95,16 +104,16 @@ register_actor 3 Bhatt Alia
 register_actor: Registered actor Alia Bhatt
 join_cast 1 1
 join_cast: Added actor Ram Konidela to the cast of RRR
-join_cast: Associated movie RRR with Ram Konidela
+join_cast: Added movie RRR to the filmography of Ram Konidela
 join_cast 3 1
 join_cast: Added actor Alia Bhatt to the cast of RRR
-join_cast: Associated movie RRR with Alia Bhatt
+join_cast: Added movie RRR to the filmography of Alia Bhatt
 join_cast 2 1
 join_cast: Added actor NTR Jr to the cast of RRR
-join_cast: Associated movie RRR with NTR Jr
+join_cast: Added movie RRR to the filmography of NTR Jr
 join_cast 1 2
 join_cast: Added actor Ram Konidela to the cast of Test
-join_cast: Associated movie Test with Ram Konidela
+join_cast: Added movie Test to the filmography of Ram Konidela
 cast 4
 cast: Error movie id 4 does not exist
 cast 1
@@ -117,9 +126,9 @@ Ram Konidela has acted in:
 - RRR
 - Test
 remove_actor 2
-Removed Actor with id:2
+NTR Jr removed from the program and from all casts
 remove_actor 3
-Removed Actor with id:3
+Alia Bhatt removed from the program and from all casts
 cast 1
 RRR features:
 - Ram Konidela
