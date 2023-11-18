@@ -383,7 +383,7 @@ TheGodfather features:
 "
 
 desired_result[4]="
-cast 2 should output: 
+Output should include: 
 
 add_movie: Added SaturdayNightFever (1977) directed by John Bednam
 add_movie: Added TheGodfather (1972) directed by Francis FordCoppala
