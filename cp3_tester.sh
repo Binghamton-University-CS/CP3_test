@@ -100,7 +100,7 @@ add_movie 25 1987 Kubrick Stanley FullMetalJacket
 add_movie 26 2003 Tarantino Quenton KillBillVolume1
 add_movie 27 2013 Scorsese Martin TheWolfOfWallStreet
 add_movie 28 1984 Spielberg Steven IndianaJonesAndTheTempleOfDoom
-add_movie 29 2019 BongJoonho Parasite
+add_movie 29 2019 Bong Joonho Parasite
 add_movie 30 2009 Cameron James Avatar
 add_movie 31 1982 Spielberg Steven E.T.TheExtraTerrestrial
 add_movie 32 2004 Jackson Peter TheLordOfTheRingsTheReturnOfTheKing
